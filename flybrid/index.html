@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			html,body{
+				width: 100%;
+				height: 100%;	
+				background: #666666;}
+			#gameblank{
+				margin: 100px 300px;
+			}
+			#mark{
+				font-size: 15px;
+				display: block;
+				position: absolute;
+				top: 70px;
+				right: 360px;
+			}
+			#showgame{
+				width: 200px;
+				height: 200px;
+				display: block;
+				position: absolute;
+				top: 200px;
+				left: 500px;
+				align-items: center;
+			}
+			#showgame img{
+				width: 180px;
+				height: 50px;
+				margin-bottom: 20px;
+			}
+			#begin{
+				width: 80px;
+				height: 45px;
+				background-image: url(img/button_play.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: none;
+				margin: 5px 50px;
+				cursor: pointer;
+			}
+			#Countdown{
+				width: 200px;
+				height: 80px;
+				position: absolute;
+				top: 250px;
+				left: 500px;
+				display: none;
+			}
+			#res{
+				width: 200px;
+				height: 200px;
+				background-color:rgba(20,20,20,0.6);
+				border-radius: 50%;
+				text-align: center;
+				position: absolute;
+				top: 200px;
+				left: 500px;
+				
+				z-index: 99;
+				display: none;
+			}
+			#res h3{
+				margin-top: 50px;
+				text-align: center;
+				padding: 5px 0;
+				}
+			#res img{
+				width: 50px;
+				height: 50px;
+				display: block;
+				margin: 10px auto;
+				border-radius: 50%;
+			}
+			#newgame{
+				width: 40px;
+				height: 20px;
+				margin: 5px auto;
+				background-image: url(img/new.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				cursor: pointer;
+				border: none;
+			}
+		</style>	
+	</head>
+	<body>
+		<canvas id="gameblank" width="800" height="400">
+			如果浏览器不支持canvas，则会显示这里的信息
+		</canvas>
+		<div id="showgame">
+			<img src="img/title.png" />
+			<button id="begin"></button>
+		</div>
+		<img id="Countdown" src="img/text_ready.png" />
+		<div id="mark"></div>
+		<div id="res">
+			<h3>最终得分：100</h3>
+			<img src="img/medals_3.png">
+			<button id="newgame"></button>
+		</div>
+		<script src="js/flybrid.js"></script>
+	</body>
+</html>
