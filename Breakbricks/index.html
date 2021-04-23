@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#breakbrick{
+				width: 800px;
+				height: 400px;
+				margin: 60px auto;
+				background-color: antiquewhite;
+				display: flex;
+			}
+			/* 游戏面板样式 */
+			#gameblank{
+				display: block;
+				width: 600px;
+				height: inherit;
+				float: left;
+				position: relative;
+			}
+			/* 砖块样式 */
+			#bricks{
+				width: 600px;
+				height: auto;
+				margin: 0;
+				padding: 0;
+				list-style: none;								
+			}
+			#bricks li{
+				margin: 0;
+				padding: 0;
+				width: 58px;
+				height: 28px;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: aqua;
+				border: white 1px solid;
+			}
+			/* 小球样式 */
+			#ball{
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				left: 30px;
+				bottom:10px;
+			}
+			/* 挡板样式 */
+			#board{
+				width: 80px;
+				height: 10px;
+				background-color: #00FFFF;
+				border-radius: 5px;
+				position: absolute;
+				left: 30px;
+				bottom: 0;
+			}
+			.show{
+				float:right;
+				width: 200px;
+				display: block;
+				background-color: #00FFFF;
+			}
+			.show span{
+				display: block;
+				width: 200px;
+				height: 30px;
+				font-size: 15px;
+				font-weight: 400;
+				padding-left: 20px;
+				margin-top: 10px;
+			}
+			.show #info{
+				font-size: 20px;
+				font-weight: 600;
+			}
+			#info,#nowtime,#gamestatus,#brickcounts{
+				border-bottom: #FFFFFF 2px dotted;
+			}
+			#start{
+				width: 100px;
+				height: 40px;
+				background: black;
+				color: aliceblue;
+				font-size: medium;
+				margin-left: 500px;
+				cursor: pointer;
+			}
+			#start:hover{
+				color: black;
+				background-color: aquamarine;
+			}
+			.gemeover{
+				position: absolute;
+				top: 220px;
+				left: 450px;
+				font-size: 48px;
+				font-weight: 500;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="gemeover">GameOver</span>
+		<div id="breakbrick">
+			<div id="gameblank">
+				<!-- 砖块 -->
+				<ul id="bricks">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div id="ball"></div><!-- 小球 -->
+				<div id="board"></div><!-- 挡板 -->
+			</div>
+			<!-- 提示信息 -->
+			<div class="show">
+				<span id="info">游戏信息</span>
+				<span>当前时间：</span>
+				<span id="nowtime">加载中……</span>
+				<span>游戏状态：</span>
+				<span id="gamestatus">加载中……</span>
+				<span>挡板打球次数：</span>
+				<span id="brickcounts">加载中……</span>
+				<span>游戏得分：</span>
+				<span id="score">加载中……</span>
+			</div>
+		</div>
+		<button id="start">开始游戏</button>
+		<script src="js/breakbricks.js"></script>
+	</body>
+</html>
